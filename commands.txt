@@ -1,0 +1,8 @@
+show service id 22222 ppp session
+show log log-id 101 | match "MD5 authentication failure and possible reason is notConfigured" pre-lines 1
+show router bgp summary all | match "Connect" pre-lines 1
+show log log-id 99 | match "Invalid bgp peering policy"
+show log log-id 3 | match "2021/02/21" post-lines 1
+show log log-id 3 | match "Framed-Routes error"
+show log log-id 3 | match Service-id
+show log log-id 3 | match "RADIUS attribute"
