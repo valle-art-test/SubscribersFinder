@@ -182,7 +182,7 @@ for device in devices.keys():
 
         """)
 
-    print(f'SE ESTA EJECUTANDO LA PRUEBA EN DEVICE {device}')
+    print(f'RUNNING THE TEST ON DEVICE {device}')
     print("""
 
 
@@ -197,10 +197,10 @@ for device in devices.keys():
     # Imprimir BGP MD5 Errors para BGP
     print('###############################################################################################')
     if BGPproblems==[]:
-        print(f'{device} CASO 2.1|2.3 - NO SE REPORTAN USUARIOS CON PROBLEMAS DE AUTENTICACION MD5 EN BGP EN {device}')
+        print(f'{device} NO USERS WITH MD5 AUTHENTICATION ISSUES ARE REPORTED IN BGP AT {device}')
     else:
         setlist=set(BGPproblems)
-        print(f'{device} CASO 2.1|2.3 - LOS USUARIOS CON PROBLEMA AUTENTICACION MD5 EN BGP EN {device} SEGUN LISTA SON: ')
+        print(f'{device} USERS WITH MD5 AUTHENTICATION PROBLEM IN BGP IN {device} ACCORDING TO THE LIST ARE: ')
         for users in setlist:
             print(users)
 
@@ -209,10 +209,10 @@ for device in devices.keys():
     # Imprimir BGP POLICY GROUPS Errors
     print('###############################################################################################')
     if IpBgpGroupFailuresParsed==[]:
-        print(f'{device} CASO 2.2 - NO SE REPORTAN USUARIOS CON PROBLEMAS DE MALA CONFIGURACION PARA BGP-POLICY-GROUP EN {device}')
+        print(f'{device} NO USERS WITH MIS CONFIGURATION ISSUES ARE REPORTED FOR BGP-POLICY-GROUP RADIUS ATT. IN {device}')
     else:
         setlist=set(IpBgpGroupFailuresParsed)
-        print(f'{device} CASO 2.2 - LOS USUARIOS CON PROBLEMAS DE BGP-POLICY-GROUP EN {device} SON: ')
+        print(f'{device} USERS WITH BGP-POLICY-GROUP ISSUES IN {device} ARE: ')
         for users in setlist:
             print(users)
 
@@ -221,7 +221,7 @@ for device in devices.keys():
                 print('')
                 print('')
                 print('')
-                print('LAS SIGUIENTES POLITICAS DE BGP SON INVALIDAS')
+                print('THE FOLLOWING BGP POLICIES ARE INVALID')
                 print(f'{ip}:       BGP-POLICY-GROUP-{bgpgroup}')
 
 
@@ -231,9 +231,9 @@ for device in devices.keys():
     # comparar con problemas de authenticacion conocidos
     aa = ListDelta(AuthFailuresParsed, KnownUsers)
     if aa == []:
-        print(f'{device} CASO 3 - NO SE REPORTAN USUARIOS CON PROBLEMAS DE AUTENTICACION EN BASE A LA LISTA DE RICHARD EN {device}')
+        print(f'{device} USERS WITH AUTHENTICATION PROBLEMS ARE NOT REPORTED BASED ON THE KNOWN LIST IN {device}')
     else:
-        print(f'{device} CASO 3 - LOS USUARIOS QUE SE ENCUENTRAN EN {device} CON PROBLEMAS DE AUTENTICACION EN BASE A LA LISTA DE RICHARD SON LOS SIGUIENTES:')
+        print(f'{device} USERS IN {device} WITH AUTHENTICATION PROBLEMS BASED ON RICHARD'S LIST ARE AS FOLLOWS:')
         for users in aa:
             print(users)
 
@@ -243,10 +243,10 @@ for device in devices.keys():
     # Imprimir Framed-Routes Errors
     print('###############################################################################################')
     if FramedFailuresParsed==[]:
-        print(f'{device} CASO 4 - NO SE REPORTAN USUARIOS CON PROBLEMAS FRAMED-ROUTE EN {device}')
+        print(f'{device} USERS WITH FRAMED-ROUTE RADIUS ATT PROBLEMS ARE NOT REPORTED. IN {device}')
     else:
         setlist=set(FramedFailuresParsed)
-        print(f'{device} CASO 4 - LOS USUARIOS CON PROBLEMA DE FRAMED-ROUTE EN {device} SON: ')
+        print(f'{device} USERS WITH FRAMED-ROUTE RADIUS ATT ISSUE IN {device} ARE: ')
         for users in setlist:
             print(users)
 
@@ -255,10 +255,10 @@ for device in devices.keys():
     # Imprimir Service-id Errors
     print('###############################################################################################')
     if ServFailuresParsed == []:
-        print(f'{device} CASO 5 - NO SE REPORTAN USUARIOS CON PROBLEMAS DE SERVICE-ID EN {device}')
+        print(f'{device} USERS WITH SERVICE-ID ISSUES ARE NOT REPORTED IN {device}')
     else:
         setlist=set(ServFailuresParsed)
-        print(f'{device} CASO 5 - LOS USUARIOS CON PROBLEMAS DE SERVICE-ID EN {device} SON: ')
+        print(f'{device} USERS WITH SERVICE-ID ISSUES IN {device} ARE: ')
         for users in setlist:
             print(users)
 
@@ -272,7 +272,7 @@ for device in devices.keys():
 
         """)
 
-    print(f'PRUEBA EJECUTADA CON EXITO EN DEVICE {device}')
+    print(f'TEST EXECUTED SUCCESSFULLY ON DEVICE {device}')
     print("""
 
 
