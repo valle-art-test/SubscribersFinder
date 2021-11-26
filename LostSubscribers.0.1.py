@@ -34,8 +34,8 @@ def CleanStrToList(word):
     b = b.replace("'", "") 
     return b
 
-def IpParser(ip):
-    a = str(re.findall(r'([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})', i))
+def IpParser(string):
+    a = str(re.findall(r'([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})', string))
     a = a.replace(", ", ".") 
     a = a.replace("(", "")
     a = a.replace(")", "")         
