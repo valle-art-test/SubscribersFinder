@@ -1,4 +1,4 @@
-import paramiko, maskpass, time, json, re, itertools
+import paramiko, maskpass, time, json, re
 
 
 username = input('Username: ')
